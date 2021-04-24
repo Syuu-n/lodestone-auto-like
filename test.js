@@ -23,7 +23,7 @@ test('auto like start', async t => {
   const characters = Selector('.entry')
 
   await t
-    .click(characters.nth(1))
+    .click(characters.nth(env.CHARACTER_INDEX))
     .navigateTo('https://jp.finalfantasyxiv.com/lodestone/blog')
 
   const blogs = await Selector('.entry__block__wrapper > .entry__blog_block')
